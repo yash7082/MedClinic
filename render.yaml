@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: flask-app
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python app.py"
+    envVars:
+      - key: MYSQL_HOST
+        value: your-mysql-host
+      - key: MYSQL_USER
+        value: your-db-username
+      - key: MYSQL_PASSWORD
+        value: your-db-password
+      - key: MYSQL_DB
+        value: Mydb
+      - key: SECRET_KEY
+        value: your-super-secret-key
